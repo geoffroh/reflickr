@@ -1,7 +1,7 @@
 class FlickrImage
-  attr_accessor :id, :owner, :url
+  attr_accessor :id, :title, :owner_name, :url
 
-  def initialize(id:, owner:, url:)
-    @id, @owner, @url = id, owner, url
+  def initialize(id:, title:, owner_name:, url:)
+    @id, @title, @owner_name, @url = id, title, owner_name, url
   end
 end

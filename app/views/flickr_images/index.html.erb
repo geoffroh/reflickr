@@ -2,8 +2,8 @@
   <div class="row">
     <% @flickr_images.each do |image| %>
       <div class="col-3">
-        <%= image_tag image.url, alt: image.owner, width: "100%" %>
-        <%= image.owner %>
+        <%= image_tag image.url, alt: image.title, width: "100%" %>
+        <%= image.owner_name %>
       </div>
     <% end %>
   </div>

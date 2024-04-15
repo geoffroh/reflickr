@@ -8,7 +8,7 @@ class FlickrImageSearch
       end
 
     results.map do |result|
-      FlickrImage.new(id: result.id, url: Flickr.url(result), owner: result.owner)
+      FlickrImage.new(id: result.id, title: result.title, url: Flickr.url(result), owner_name: result.ownername)
     end
   end
 
@@ -16,7 +16,8 @@ class FlickrImageSearch
     {
       per_page: 8,
       safe_search: 1,
-      content_types: 0
+      content_types: 0,
+      extras: 'owner_name'
     }
   end
 end

@@ -6,7 +6,7 @@ describe FlickrImagesController do
     stub_flickr_get_methods
     stubbed_api_response = {"photos": {"page": 1, "pages": 1, "perpage": 8, "total": 0, "photo": []}, "stat": "ok"}
     stub_request(:post, "https://api.flickr.com/services/rest/").
-      with(body: {"content_types" => "0", "format" => "json", "method" => "flickr.photos.getRecent", "nojsoncallback" => "1", "per_page" => "8", "safe_search" => "1"}).
+      with(body: {"content_types" => "0", "format" => "json", "method" => "flickr.photos.getRecent", "nojsoncallback" => "1", "per_page" => "8", "safe_search" => "1", "extras"=>"owner_name"}).
         to_return(status: 200, body: stubbed_api_response.to_json, headers: {})
   end
 
