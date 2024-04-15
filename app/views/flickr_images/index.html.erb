@@ -1,3 +1,9 @@
 <div class="container">
-  <h1>Flickr Images</h1>
+  <h1>Reflickr</h1>
+  <% @flickr_images.each do |image| %>
+    <div>
+      <%= image_tag image.url, alt: image.owner %>
+      <%= image.owner %>
+    </div>
+  <% end %>
 </div>

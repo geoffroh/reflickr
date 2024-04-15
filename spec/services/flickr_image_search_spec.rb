@@ -1,11 +1,9 @@
 require 'rails_helper'
+include FlickrApi
 
 describe FlickrImageSearch do
   before do
-    # The flickr gem first calls the REST API to get the list of valid methods
-    stub_request(:post, "https://api.flickr.com/services/rest/").
-      with(:body => {"format"=>"json", "method"=>"flickr.reflection.getMethods", "nojsoncallback"=>"1"}).
-        to_return(status: 200, body: {"methods":{"method":[{"_content":"flickr.photos.getRecent"},{"_content":"flickr.photos.search"}]},"stat":"ok"}.to_json, headers: {})
+    stub_flickr_get_methods
   end
 
   context ".call with an empty search term" do
