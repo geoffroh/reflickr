@@ -14,7 +14,7 @@ group :development, :test do
   gem "dotenv"
 end
 
-group :development do
-  # gem "spring"
+group :test do
+  gem "webmock"
 end
 
