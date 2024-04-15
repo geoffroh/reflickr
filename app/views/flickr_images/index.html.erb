@@ -1,9 +1,10 @@
 <div class="container">
-  <h1>Reflickr</h1>
-  <% @flickr_images.each do |image| %>
-    <div>
-      <%= image_tag image.url, alt: image.owner %>
-      <%= image.owner %>
-    </div>
-  <% end %>
+  <div class="row">
+    <% @flickr_images.each do |image| %>
+      <div class="col-3">
+        <%= image_tag image.url, alt: image.owner, width: "100%" %>
+        <%= image.owner %>
+      </div>
+    <% end %>
+  </div>
 </div>

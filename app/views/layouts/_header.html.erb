@@ -1,0 +1,10 @@
+<header class="py-3 mb-3 border-bottom">
+    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+      <h1>Reflickr</h1>
+      <div class="d-flex align-items-center">
+        <%= form_with method: "GET", class: "w-100 me-3", role: "search" do |f| %>
+          <%= f.text_field :search_term, class: "form-control", placeholder: "Search...", value: params[:search_term] %>
+        <% end %>
+      </div>
+    </div>
+  </header>
