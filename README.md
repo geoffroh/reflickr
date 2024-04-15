@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+An example Rails app to search images in Flickr's API.
 
 * Ruby version
 
-* System dependencies
+3.3.0
 
 * Configuration
 
-* Database creation
-
-* Database initialization
+```
+cp .env.example .env
+```
+Then add your own api key/secret for Flickr's API. New keys can be created [here](https://www.flickr.com/services/apps/create/apply)
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rspec
